@@ -1,0 +1,20 @@
+#+title: helloworld
+#+foobar: helloworld
+
+#+begin_src emacs-lisp
+  (pp (org-element-parse-buffer))
+#+end_src
+
+#+RESULTS:
+#+begin_example
+(org-data
+ (:begin 1 :contents-begin 1 :contents-end 110 :end 110 :robust-begin 3 :robust-end 108 :post-blank 0 :post-affiliated 1 :path "/home/augustfengd/repositories/gh/augustfengd/learn.org/parsing.0/foobar.org" :mode org-data :CATEGORY "foobar" :granularity nil)
+ (section
+  (:begin 1 :end 110 :contents-begin 1 :contents-end 110 :robust-begin 1 :robust-end 108 :post-blank 0 :post-affiliated 1 :mode first-section :granularity nil :parent #0)
+  (keyword
+   (:key "TITLE" :value "helloworld" :begin 1 :end 21 :post-blank 0 :post-affiliated 1 :mode top-comment :granularity nil :parent #1))
+  (keyword
+   (:key "FOOBAR" :value "helloworld" :begin 21 :end 43 :post-blank 1 :post-affiliated 21 :mode nil :granularity nil :parent #1))
+  (src-block
+   (:language "emacs-lisp" :switches nil :parameters nil :begin 43 :end 110 :number-lines nil :preserve-indent nil :retain-labels t :use-labels t :label-fmt nil :value "  (pp (org-element-parse-buffer))\n" :post-blank 0 :post-affiliated 43 :mode nil :granularity nil :parent #1))))
+#+end_example
